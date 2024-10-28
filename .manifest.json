@@ -1,6 +1,6 @@
 {
-  "liblabVersion": "2.8.0",
-  "date": "2024-10-24T10:08:13.593Z",
+  "liblabVersion": "2.9.0",
+  "date": "2024-10-28T14:41:26.738Z",
   "config": {
     "apiId": 1249,
     "sdkName": "Celitech",
@@ -65,6 +65,10 @@
       "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
     },
     "multiTenant": true,
+    "hooksLocation": {
+      "bucketKey": "7838/hooks.zip",
+      "bucketName": "prod-liblab-api-stack-hooks"
+    },
     "includeWatermark": false,
     "additionalConstructorParameters": [
       {
@@ -80,8 +84,8 @@
     "language": "java",
     "deliveryMethod": "zip",
     "hooks": {
-      "enabled": false,
-      "sourceDir": ""
+      "enabled": true,
+      "sourceDir": "/tmp/resources/hooks"
     },
     "usesFormData": false,
     "authentication": {},
@@ -129,9 +133,11 @@
     "src/main/java/net/celitech/celitech/services/PackagesService.java",
     "src/main/java/net/celitech/celitech/http/Environment.java",
     "src/main/java/net/celitech/celitech/Celitech.java",
+    "src/main/java/net/celitech/celitech/hook/CustomHook.java",
     "./LICENSE",
     "src/main/java/net/celitech/celitech/http/interceptors/RetryInterceptor.java",
     "src/main/java/net/celitech/celitech/config/RetryConfig.java",
+    "src/main/java/net/celitech/celitech/http/interceptors/HookInterceptor.java",
     "src/main/java/net/celitech/celitech/config/CelitechConfig.java",
     "documentation/snippets/destinations-get.md",
     "documentation/snippets/packages-get.md",
